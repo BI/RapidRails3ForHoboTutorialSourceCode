@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart caption="Recipies Count by Country">
+  <set label="American" value="3"/>
+  <set label="French" value="1"/>
+  <set label="Chinease" value="1"/>
+</chart>

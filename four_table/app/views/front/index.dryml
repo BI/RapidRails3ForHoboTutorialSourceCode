@@ -1,0 +1,54 @@
+<def tag="messages">
+  <br/><br/>
+  <ul>
+    <li param="msg1">Message 1</li>
+    <li param="msg2">Message 2</li>
+    <li param="msg3">Message 3</li>
+  </ul>
+</def>
+
+<def tag="bd-it">
+    <br/>
+    <b><i><span param="default">stuff</span></i></b>
+</def>
+
+<page title="Home">
+
+  <body: class="front-page"/>
+
+  <content:>
+    <header class="content-header">
+      <h1>Welcome to <app-name/></h1>
+      <section class="welcome-message">
+        <h3>Congratulations! Your Hobo Rails App is up and running</h3>
+        <ul>
+          <li>To customise this page: edit app/views/front/index.dryml</li>
+        </ul>
+
+        <% if User.count == 0 -%>
+          <h3 style="margin-top: 20px;">There are no user accounts - please provide the details of the site administrator</h3>
+          <form with="&this || User.new" without-cancel>
+            <field-list: fields="name, email_address, password, password_confirmation"/>
+            <submit: label="Register Administrator"/>
+          </form>
+        <% end -%>
+
+        <messages>
+          <msg2:>This is the seond message.</msg2>
+          <msg1:>This is the first messsage.</msg1>
+          <msg3:>This is the third message passed as a parameter.</msg3>
+        </messages>
+        
+        <messagex/>
+        
+        <bd-it/>
+        <bd-it>More stuff</bd-it>
+
+      </section>
+    </header>
+
+    <section class="content-body">
+    </section>
+  </content:>
+
+</page>

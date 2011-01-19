@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart caption="Recipies Count by Category">
+  <set label="Sour" value="1"/>
+  <set label="Hot" value="1"/>
+</chart>

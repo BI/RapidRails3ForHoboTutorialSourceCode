@@ -1,0 +1,33 @@
+<include src="rapid" plugin="hobo"/>
+
+<include src="taglibs/auto/rapid/cards"/>
+<include src="taglibs/auto/rapid/pages"/>
+<include src="taglibs/auto/rapid/forms"/>
+
+<set-theme name="clean"/>
+
+<extend tag="card" for="Task">
+  <old-card merge>
+    <append-body:>
+      <div class="users">
+        Assigned users: <repeat:users join=", "><a/></repeat><else>None</else>
+      </div>
+    </append-body:>
+  </old-card>
+</extend>
+
+<extend tag="form" for="Task">
+  <old-form merge>
+    <field-list: fields="name, due_date, users"/>
+  </old-form>
+</extend>
+
+<extend tag="page"> 
+  <old-page merge> 
+    <after-scripts:> 
+      <javascript name="ckeditor/ckeditor"/>        
+      <javascript name="load_ckeditor"/>  
+    </after-scripts:> 
+  </old-page>
+</extend>
+

@@ -1,0 +1,18 @@
+<!-- Global taglib - these tags are shared across all subsites -->
+
+<include src="rapid" plugin="hobo"/>
+
+<include src="taglibs/auto/rapid/cards"/>
+<include src="taglibs/auto/rapid/pages"/>
+<include src="taglibs/auto/rapid/forms"/>
+
+<set-theme name="clean"/>
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <!--<nav-item href="#{base_url}/">Home</nav-item>-->
+    <nav-item with="&Recipe">
+      <ht key="recipe.nav_item" count="100"><model-name-human count="100"/></ht>
+    </nav-item>
+  </navigation>
+</def>

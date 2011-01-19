@@ -1,0 +1,1912 @@
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (14.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (9.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to InitialMigration (20110110185512)
+  [1m[36mSQL (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (2.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "crypted_password" varchar(40), "salt" varchar(40), "remember_token" varchar(255), "remember_token_expires_at" datetime, "name" varchar(255), "email_address" varchar(255), "administrator" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime, "state" varchar(255) DEFAULT 'active', "key_timestamp" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  CREATE INDEX "index_users_on_state" ON "users" ("state")
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110110185512')[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_state')
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-11 00:34:20 +0530
+  Processing by FrontController#index as HTML
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/dryml-1.3.0.pre25/taglibs/core.dryml in 0.03s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_core.dryml in 0.21s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_document_tags.dryml in 0.02s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_pages.dryml in 0.14s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_editing.dryml in 0.12s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_forms.dryml in 0.24s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_navigation.dryml in 0.08s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_plus.dryml in 0.10s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_generics.dryml in 0.07s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_summary.dryml in 0.06s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_user_pages.dryml in 0.21s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_i18n.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid.dryml in 1.35s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.16s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.56s
+  DRYML: Compiled app/views/front/index.dryml in 1.80s
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+Rendered front/index.dryml (2261.1ms)
+Completed 200 OK in 2280ms (Views: 2265.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-01-11 00:35:31 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by UsersController#create as HTML
+  Parameters: {"page_path"=>"/", "authenticity_token"=>"aADo9sDfQaNvkeldVe/p9TyorgTASnrtA29xLpPrZg4=", "user"=>{"name"=>"Admin", "email_address"=>"admin@barquin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."name" = 'Admin') LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email_address") = LOWER('admin@barquin.com')) LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered front/index.dryml (617.0ms)
+Completed 200 OK in 1006ms (Views: 621.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-01-11 00:35:41 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by UsersController#create as HTML
+  Parameters: {"page_path"=>"/", "authenticity_token"=>"aADo9sDfQaNvkeldVe/p9TyorgTASnrtA29xLpPrZg4=", "user"=>{"name"=>"Admin", "email_address"=>"admin@barquin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."name" = 'Admin') LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email_address") = LOWER('admin@barquin.com')) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mAREL (6.0ms)[0m  [1mINSERT INTO "users" ("crypted_password", "salt", "remember_token", "remember_token_expires_at", "name", "email_address", "administrator", "created_at", "updated_at", "state", "key_timestamp") VALUES ('6592eaa7df92a47fed4a2c7502dd566f570c2b16', 'a8fd8585b594528347b1f4e1a60f38fb6d18005f', NULL, NULL, 'Admin', 'admin@barquin.com', 't', '2011-01-10 19:05:43.037284', '2011-01-10 19:05:43.037284', 'active', NULL)[0m
+Redirected to http://localhost:3000
+Completed 302 Found in 134ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-11 00:35:43 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by FrontController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered front/index.dryml (769.0ms)
+Completed 200 OK in 795ms (Views: 775.0ms | ActiveRecord: 12.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to InitialMigration (20110110185512)
+Migrating to CreateGames (20110110191043)
+  [1m[36mSQL (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (2.0ms)[0m  CREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110110191043')[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("games")[0m
+  [1m[35mSQL (1.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_state')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-11 00:50:19 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by FrontController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.18s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.20s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.08s
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered front/index.dryml (1039.1ms)
+Completed 200 OK in 1065ms (Views: 1044.1ms | ActiveRecord: 3.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_state')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("games")[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to InitialMigration (20110110185512)
+Migrating to CreateGames (20110110191043)
+Migrating to HoboMigration1 (20110110193647)
+  [1m[36mSQL (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (3.0ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime, "updated_at" datetime, "user_id" integer, "game_id" integer) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("comments")[0m
+  [1m[35mSQL (1.0ms)[0m  CREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("comments")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_comments_on_user_id')
+  [1m[36mSQL (1.0ms)[0m  [1mCREATE INDEX "index_comments_on_game_id" ON "comments" ("game_id")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110110193647')
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36mSQL (1.0ms)[0m  [1mPRAGMA index_info('index_comments_on_game_id')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_comments_on_user_id')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("games")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_state')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-11 01:07:55 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by FrontController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.19s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.31s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.04s
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered front/index.dryml (1308.1ms)
+Completed 200 OK in 1335ms (Views: 1314.1ms | ActiveRecord: 5.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-11 01:09:29 +0530
+  Processing by FrontController#index as HTML
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/dryml-1.3.0.pre25/taglibs/core.dryml in 0.03s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_core.dryml in 0.18s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_support.dryml in 0.02s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_pages.dryml in 0.17s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_editing.dryml in 0.04s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_forms.dryml in 0.26s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_navigation.dryml in 0.04s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_plus.dryml in 0.12s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_summary.dryml in 0.06s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_user_pages.dryml in 0.20s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_i18n.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid.dryml in 1.27s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.02s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.19s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.04s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.58s
+  DRYML: Compiled app/views/front/index.dryml in 1.81s
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered front/index.dryml (2227.1ms)
+Completed 200 OK in 2256ms (Views: 2234.1ms | ActiveRecord: 3.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-11 01:14:14 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by FrontController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.22s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.36s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.09s
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered front/index.dryml (1359.1ms)
+Completed 200 OK in 1385ms (Views: 1365.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2011-01-11 01:14:18 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" LIMIT 30 OFFSET 0
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: index-page (166.0ms)
+Completed 200 OK in 858ms (Views: 836.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2011-01-11 01:15:21 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" LIMIT 30 OFFSET 0
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: index-page (147.0ms)
+Completed 200 OK in 725ms (Views: 704.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/games/new" for 127.0.0.1 at 2011-01-11 01:15:25 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+Rendered controller: games; dryml-tag: new-page (161.0ms)
+Completed 200 OK in 904ms (Views: 882.1ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2011-01-11 01:15:30 +0530
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by GamesController#create as HTML
+  Parameters: {"page_path"=>"/games/new", "authenticity_token"=>"aADo9sDfQaNvkeldVe/p9TyorgTASnrtA29xLpPrZg4="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "games" ("created_at", "updated_at") VALUES ('2011-01-10 19:45:32.107931', '2011-01-10 19:45:32.107931')[0m
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 214ms
+
+
+Started GET "/games/1" for 127.0.0.1 at 2011-01-11 01:15:32 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 1) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (282.0ms)
+Completed 200 OK in 976ms (Views: 952.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/games/1/edit" for 127.0.0.1 at 2011-01-11 01:16:22 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 1) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: edit-page (210.0ms)
+Completed 200 OK in 778ms (Views: 753.0ms | ActiveRecord: 4.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("comments")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_comments_on_game_id')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_comments_on_user_id')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_state')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("games")
+
+
+Started GET "/games/1/edit" for 127.0.0.1 at 2011-01-11 01:20:15 +0530
+  [1m[35mSQL (2.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (1.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 1) LIMIT 1
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.40s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.53s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.08s
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: edit-page (331.0ms)
+Completed 200 OK in 2127ms (Views: 2096.1ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/games/1" for 127.0.0.1 at 2011-01-11 01:20:24 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#destroy as JS
+  Parameters: {"authenticity_token"=>"aADo9sDfQaNvkeldVe/p9TyorgTASnrtA29xLpPrZg4=", "_"=>"", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 1) LIMIT 1
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".game_id = 1)[0m
+  [1m[35mAREL (82.0ms)[0m  DELETE FROM "games" WHERE ("games"."id" = 1)
+Rendered text template (0.0ms)
+Completed 200 OK in 308ms (Views: 23.0ms | ActiveRecord: 84.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to InitialMigration (20110110185512)
+Migrating to CreateGames (20110110191043)
+Migrating to CreateComments (20110110193647)
+Migrating to HoboMigration1 (20110110194956)
+  [1m[36mSQL (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (3.0ms)[0m  ALTER TABLE "games" ADD "name" varchar(255)
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110110194956')[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("comments")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_comments_on_game_id')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_comments_on_user_id')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("games")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_state')
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-11 01:21:38 +0530
+  Processing by FrontController#index as HTML
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/dryml-1.3.0.pre25/taglibs/core.dryml in 0.03s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_core.dryml in 0.22s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_pages.dryml in 0.23s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_editing.dryml in 0.07s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_forms.dryml in 0.38s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_navigation.dryml in 0.08s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_plus.dryml in 0.10s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_generics.dryml in 0.03s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_summary.dryml in 0.09s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_user_pages.dryml in 0.20s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_i18n.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid.dryml in 1.63s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.06s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.35s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.05s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 2.12s
+  DRYML: Compiled app/views/front/index.dryml in 2.41s
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered front/index.dryml (2932.2ms)
+Completed 200 OK in 2961ms (Views: 2939.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2011-01-11 01:21:43 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (1.0ms)[0m  SELECT "games".* FROM "games" LIMIT 30 OFFSET 0
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: index-page (236.0ms)
+Completed 200 OK in 988ms (Views: 966.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/games/1/edit" for 127.0.0.1 at 2011-01-11 01:21:53 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 1) LIMIT 1
+Completed   in 23ms
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: not-found-page (131.0ms)
+
+
+Started GET "/games/new" for 127.0.0.1 at 2011-01-11 01:21:59 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+Rendered controller: games; dryml-tag: new-page (248.0ms)
+Completed 200 OK in 1203ms (Views: 1182.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2011-01-11 01:22:07 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by GamesController#create as HTML
+  Parameters: {"page_path"=>"/games/new", "authenticity_token"=>"aADo9sDfQaNvkeldVe/p9TyorgTASnrtA29xLpPrZg4=", "game"=>{"name"=>"Game 1"}}
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "games" ("created_at", "updated_at", "name") VALUES ('2011-01-10 19:52:09.491661', '2011-01-10 19:52:09.491661', 'Game 1')[0m
+Redirected to http://localhost:3000/games/2-game-1
+Completed 302 Found in 189ms
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:22:09 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (405.0ms)
+Completed 200 OK in 917ms (Views: 891.1ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:23:58 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+ArgumentError (Invalid owner action: all):
+  app/controllers/games_controller.rb:7:in `<class:GamesController>'
+  app/controllers/games_controller.rb:1:in `<top (required)>'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:24:12 +0530
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/controllers/games_controller.rb:7:in `<class:GamesController>'
+  app/controllers/games_controller.rb:1:in `<top (required)>'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:24:27 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.66s
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (146.0ms)
+Completed 200 OK in 1349ms (Views: 1327.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/dev/set_current_user?login=" for 127.0.0.1 at 2011-01-11 01:24:36 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by DevController#set_current_user as HTML
+  Parameters: {"login"=>""}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email_address" = '') LIMIT 1
+Redirected to http://localhost:3000/games/2-game-1
+Completed 302 Found in 80ms
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:24:38 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (181.0ms)
+Completed 200 OK in 896ms (Views: 879.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/dev/set_current_user?login=admin%40barquin.com" for 127.0.0.1 at 2011-01-11 01:24:43 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by DevController#set_current_user as HTML
+  Parameters: {"login"=>"admin@barquin.com"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email_address" = 'admin@barquin.com') LIMIT 1[0m
+Redirected to http://localhost:3000/games/2-game-1
+Completed 302 Found in 281ms
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:24:45 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (210.0ms)
+Completed 200 OK in 767ms (Views: 742.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:26:08 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.57s
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (200.0ms)
+Completed 200 OK in 1398ms (Views: 1375.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:26:55 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.59s
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (201.0ms)
+Completed 200 OK in 1312ms (Views: 1289.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:27:12 +0530
+  [1m[35mSQL (2.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.84s
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (247.0ms)
+Completed 200 OK in 1691ms (Views: 1666.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/games/2-game-1/edit" for 127.0.0.1 at 2011-01-11 01:27:18 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#edit as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (1.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: edit-page (244.0ms)
+Completed 200 OK in 1191ms (Views: 1164.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:28:02 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (230.0ms)
+Completed 200 OK in 748ms (Views: 724.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:28:07 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (1.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: games; dryml-tag: show-page (237.0ms)
+Completed 200 OK in 881ms (Views: 857.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:29:02 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.22s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.36s
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".game_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".game_id = 2)[0m
+Rendered controller: games; dryml-tag: show-page (212.0ms)
+Completed 200 OK in 1345ms (Views: 1320.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:29:22 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.77s
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".game_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".game_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 100[0m
+Rendered controller: games; dryml-tag: show-page (377.0ms)
+Completed 200 OK in 1919ms (Views: 1889.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/games/2-game-1" for 127.0.0.1 at 2011-01-11 01:31:06 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2-game-1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".game_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".game_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 2) LIMIT 1
+Rendered controller: games; dryml-tag: show-page (241.0ms)
+Completed 200 OK in 783ms (Views: 759.0ms | ActiveRecord: 4.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_comments_on_game_id')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_comments_on_user_id')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_state')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("games")[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to InitialMigration (20110110185512)
+Migrating to CreateGames (20110110191043)
+Migrating to CreateComments (20110110193647)
+Migrating to HoboMigration1 (20110110194956)
+Migrating to HoboMigration2 (20110110201522)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (4.0ms)[0m  [1mCREATE TABLE "courts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  ALTER TABLE "comments" ADD "court_id" integer
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("comments")[0m
+  [1m[35mSQL (1.0ms)[0m  PRAGMA index_info('index_comments_on_game_id')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_comments_on_user_id')[0m
+  [1m[35mSQL (0.0ms)[0m  CREATE INDEX "index_comments_on_court_id" ON "comments" ("court_id")
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110110201522')[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1mPRAGMA index_list("comments")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_comments_on_court_id')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_comments_on_game_id')[0m
+  [1m[35mSQL (1.0ms)[0m  PRAGMA index_info('index_comments_on_user_id')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("courts")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("games")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_state')
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (1.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_comments_on_court_id')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_comments_on_game_id')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_comments_on_user_id')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_state')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("games")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("courts")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-11 01:51:39 +0530
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by FrontController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.27s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.52s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.11s
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered front/index.dryml (1555.1ms)
+Completed 200 OK in 1580ms (Views: 1560.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/courts" for 127.0.0.1 at 2011-01-11 01:51:44 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by CourtsController#index as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCourt Load (0.0ms)[0m  [1mSELECT "courts".* FROM "courts" LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+Rendered controller: courts; dryml-tag: index-page (424.0ms)
+Completed 200 OK in 1018ms (Views: 995.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/courts/new" for 127.0.0.1 at 2011-01-11 01:51:49 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CourtsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+Rendered controller: courts; dryml-tag: new-page (224.0ms)
+Completed 200 OK in 799ms (Views: 779.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/courts" for 127.0.0.1 at 2011-01-11 01:52:00 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CourtsController#create as HTML
+  Parameters: {"page_path"=>"/courts/new", "authenticity_token"=>"aADo9sDfQaNvkeldVe/p9TyorgTASnrtA29xLpPrZg4=", "court"=>{"name"=>"Pitch 2"}}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (3.0ms)[0m  [1mINSERT INTO "courts" ("name", "created_at", "updated_at") VALUES ('Pitch 2', '2011-01-10 20:22:02.949240', '2011-01-10 20:22:02.949240')[0m
+Redirected to http://localhost:3000/courts/1-pitch-2
+Completed 302 Found in 73ms
+
+
+Started GET "/courts/1-pitch-2" for 127.0.0.1 at 2011-01-11 01:52:03 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by CourtsController#show as HTML
+  Parameters: {"id"=>"1-pitch-2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCourt Load (1.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+Rendered controller: courts; dryml-tag: show-page (483.0ms)
+Completed 200 OK in 1355ms (Views: 1329.1ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/courts/1-pitch-2" for 127.0.0.1 at 2011-01-11 01:52:37 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by CourtsController#show as HTML
+  Parameters: {"id"=>"1-pitch-2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCourt Load (0.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.25s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.59s
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+Rendered controller: courts; dryml-tag: show-page (292.0ms)
+Completed 200 OK in 1693ms (Views: 1663.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/courts/1-pitch-2" for 127.0.0.1 at 2011-01-11 01:52:50 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CourtsController#show as HTML
+  Parameters: {"id"=>"1-pitch-2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mCourt Load (0.0ms)[0m  [1mSELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1[0m
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 1.46s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.11s
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT "games".* FROM "games" LIMIT 100
+Rendered controller: courts; dryml-tag: show-page (494.0ms)
+Completed 200 OK in 2747ms (Views: 2526.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/courts/1-pitch-2" for 127.0.0.1 at 2011-01-11 01:53:04 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CourtsController#show as HTML
+  Parameters: {"id"=>"1-pitch-2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mCourt Load (1.0ms)[0m  [1mSELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1[0m
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 1.10s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.07s
+  [1m[35mUser Load (60.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1[0m
+Rendered controller: courts; dryml-tag: show-page (647.0ms)
+Completed 200 OK in 2627ms (Views: 2544.1ms | ActiveRecord: 64.0ms)
+
+
+Started POST "/courts/1-pitch-2/comments" for 127.0.0.1 at 2011-01-11 01:55:10 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by CommentsController#create_for_court as HTML
+  Parameters: {"page_path"=>"/courts/1-pitch-2", "authenticity_token"=>"aADo9sDfQaNvkeldVe/p9TyorgTASnrtA29xLpPrZg4=", "comment"=>{"user_id"=>"1", "court_id"=>"1", "body"=>"The best field in Lisbon."}, "court_id"=>"1-pitch-2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCourt Load (0.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+  [1m[36mAREL (3.0ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at", "user_id", "game_id", "court_id") VALUES ('The best field in Lisbon.', '2011-01-10 20:25:12.772098', '2011-01-10 20:25:12.772098', 1, NULL, 1)[0m
+Redirected to http://localhost:3000
+Completed 302 Found in 128ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-11 01:55:12 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by FrontController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+Rendered front/index.dryml (714.0ms)
+Completed 200 OK in 740ms (Views: 719.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/courts" for 127.0.0.1 at 2011-01-11 01:55:19 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CourtsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCourt Load (0.0ms)[0m  SELECT "courts".* FROM "courts" LIMIT 30 OFFSET 0
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+Rendered controller: courts; dryml-tag: index-page (254.0ms)
+Completed 200 OK in 822ms (Views: 798.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/courts/1-pitch-2" for 127.0.0.1 at 2011-01-11 01:55:25 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by CourtsController#show as HTML
+  Parameters: {"id"=>"1-pitch-2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCourt Load (0.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mComment Load (63.0ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+Rendered controller: courts; dryml-tag: show-page (376.0ms)
+Completed 200 OK in 1561ms (Views: 1378.1ms | ActiveRecord: 70.0ms)
+  [1m[36mSQL (2.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-18 15:07:16 +0530
+  Processing by FrontController#index as HTML
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/dryml-1.3.0.pre25/taglibs/core.dryml in 0.03s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_core.dryml in 0.20s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_document_tags.dryml in 0.02s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_pages.dryml in 0.17s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_editing.dryml in 0.04s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_forms.dryml in 0.24s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_navigation.dryml in 0.11s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_plus.dryml in 0.08s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_generics.dryml in 0.06s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_summary.dryml in 0.06s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_user_pages.dryml in 0.21s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid_i18n.dryml in 0.01s
+  DRYML: Compiled c:/Ruby192/lib/ruby/gems/1.9.1/gems/hobo-1.3.0.pre25/lib/hobo/rapid/taglibs/rapid.dryml in 1.29s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.04s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.53s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.05s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.96s
+  DRYML: Compiled app/views/front/index.dryml in 2.23s
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+Rendered front/index.dryml (2695.2ms)
+Completed 200 OK in 2764ms (Views: 2719.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/courts" for 127.0.0.1 at 2011-01-18 15:07:26 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CourtsController#index as HTML
+  [1m[36mCourt Load (0.0ms)[0m  [1mSELECT "courts".* FROM "courts" LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+Rendered controller: courts; dryml-tag: index-page (309.0ms)
+Completed 200 OK in 805ms (Views: 789.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/courts/1-pitch-2" for 127.0.0.1 at 2011-01-18 15:07:32 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CourtsController#show as HTML
+  Parameters: {"id"=>"1-pitch-2"}
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCourt Load (0.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered controller: courts; dryml-tag: show-page (408.0ms)
+Completed 200 OK in 1059ms (Views: 1037.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/dev/set_current_user?login=admin%40barquin.com" for 127.0.0.1 at 2011-01-18 15:07:40 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by DevController#set_current_user as HTML
+  Parameters: {"login"=>"admin@barquin.com"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email_address" = 'admin@barquin.com') LIMIT 1
+Redirected to http://localhost:3000/courts/1-pitch-2
+Completed 302 Found in 62ms
+
+
+Started GET "/courts/1-pitch-2" for 127.0.0.1 at 2011-01-18 15:07:42 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CourtsController#show as HTML
+  Parameters: {"id"=>"1-pitch-2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCourt Load (1.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+Rendered controller: courts; dryml-tag: show-page (451.0ms)
+Completed 200 OK in 1402ms (Views: 1142.1ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/courts/1-pitch-2/comments" for 127.0.0.1 at 2011-01-18 15:08:02 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CommentsController#create_for_court as HTML
+  Parameters: {"page_path"=>"/courts/1-pitch-2", "authenticity_token"=>"zMbE6dE3DoJudxOvqo9q673ENyQRBUu2v/84ZuxMbcQ=", "comment"=>{"user_id"=>"1", "court_id"=>"1", "body"=>"Not even Barcelona has a field this good."}, "court_id"=>"1-pitch-2"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCourt Load (1.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at", "user_id", "game_id", "court_id") VALUES ('Not even Barcelona has a field this good.', '2011-01-18 09:38:04.007534', '2011-01-18 09:38:04.007534', 1, NULL, 1)[0m
+Redirected to http://localhost:3000
+Completed 302 Found in 132ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-18 15:08:04 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by FrontController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "users"
+Rendered front/index.dryml (695.0ms)
+Completed 200 OK in 722ms (Views: 700.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/courts" for 127.0.0.1 at 2011-01-18 15:08:21 +0530
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CourtsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCourt Load (1.0ms)[0m  SELECT "courts".* FROM "courts" LIMIT 30 OFFSET 0
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+Rendered controller: courts; dryml-tag: index-page (290.0ms)
+Completed 200 OK in 1059ms (Views: 1035.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/courts/1-pitch-2" for 127.0.0.1 at 2011-01-18 15:08:27 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by CourtsController#show as HTML
+  Parameters: {"id"=>"1-pitch-2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCourt Load (0.0ms)[0m  [1mSELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1
+Rendered controller: courts; dryml-tag: show-page (534.0ms)
+Completed 200 OK in 1216ms (Views: 1191.1ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/comments/2" for 127.0.0.1 at 2011-01-18 15:08:35 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by CommentsController#destroy as JS
+  Parameters: {"authenticity_token"=>"zMbE6dE3DoJudxOvqo9q673ENyQRBUu2v/84ZuxMbcQ=", "_"=>"", "id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments"."id" = 2) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mDELETE FROM "comments" WHERE ("comments"."id" = 2)[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 81ms (Views: 22.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/courts/1-pitch-2" for 127.0.0.1 at 2011-01-18 15:08:42 +0530
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by CourtsController#show as HTML
+  Parameters: {"id"=>"1-pitch-2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCourt Load (1.0ms)[0m  [1mSELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".court_id = 1)
+  [1m[36mComment Load (2.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".court_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1[0m
+Rendered controller: courts; dryml-tag: show-page (276.0ms)
+Completed 200 OK in 842ms (Views: 814.0ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/courts/1-pitch-2/comments" for 127.0.0.1 at 2011-01-18 15:08:56 +0530
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by CommentsController#create_for_court as HTML
+  Parameters: {"page_path"=>"/courts/1-pitch-2", "authenticity_token"=>"zMbE6dE3DoJudxOvqo9q673ENyQRBUu2v/84ZuxMbcQ=", "comment"=>{"user_id"=>"1", "court_id"=>"1", "body"=>"Not even Barcelona has a field this good."}, "court_id"=>"1-pitch-2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCourt Load (0.0ms)[0m  [1mSELECT "courts".* FROM "courts" WHERE ("courts"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (3.0ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at", "user_id", "game_id", "court_id") VALUES ('Not even Barcelona has a field this good.', '2011-01-18 09:38:58.986678', '2011-01-18 09:38:58.986678', 1, NULL, 1)
+Redirected to http://localhost:3000
+Completed 302 Found in 115ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-18 15:08:59 +0530
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by FrontController#index as HTML
+  [1m[36mUser Load (48.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" LIMIT 30
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Rendered front/index.dryml (639.0ms)
+Completed 200 OK in 711ms (Views: 644.0ms | ActiveRecord: 56.0ms)
